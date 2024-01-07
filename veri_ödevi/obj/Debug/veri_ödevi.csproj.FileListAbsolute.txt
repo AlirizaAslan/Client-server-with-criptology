@@ -1,0 +1,24 @@
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.AssemblyReference.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.SuggestedBindingRedirects.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.Client.resources
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.Form1.resources
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.Properties.Resources.resources
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.GenerateResource.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.CoreCompileInputs.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\bin\Debug\veri_ödevi.exe.config
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\bin\Debug\veri_ödevi.exe
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\bin\Debug\veri_ödevi.pdb
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.exe
+C:\Users\mucur\OneDrive\Masaüstü\veri ödevi\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.pdb
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\bin\Debug\veri_ödevi.exe.config
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\bin\Debug\veri_ödevi.exe
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\bin\Debug\veri_ödevi.pdb
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.AssemblyReference.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.SuggestedBindingRedirects.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.Client.resources
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.Form1.resources
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.Properties.Resources.resources
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.GenerateResource.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.csproj.CoreCompileInputs.cache
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.exe
+C:\Users\mucur\OneDrive\Masaüstü\veri_ödevi\veri_ödevi\obj\Debug\veri_ödevi.pdb
