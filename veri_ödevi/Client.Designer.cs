@@ -37,18 +37,11 @@
             this.İsimDüzenleButton = new System.Windows.Forms.Button();
             this.ListeyiGüncelleButton = new System.Windows.Forms.Button();
             this.OlusturButton = new System.Windows.Forms.Button();
-            this.MesajGönderButton = new System.Windows.Forms.Button();
+            this.btnŞifresizDosyalar = new System.Windows.Forms.Button();
             this.SilButton = new System.Windows.Forms.Button();
             this.DosyaEkleButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtKey = new System.Windows.Forms.TextBox();
             this.LogLabel = new System.Windows.Forms.Label();
             this.LogTextBox = new System.Windows.Forms.TextBox();
-            this.listViewReceiver = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.file_path_group_box = new System.Windows.Forms.GroupBox();
             this.remove_item_button = new System.Windows.Forms.Button();
             this.add_files_button = new System.Windows.Forms.Button();
@@ -63,12 +56,16 @@
             this.decrypt_button = new System.Windows.Forms.Button();
             this.encrypt_button = new System.Windows.Forms.Button();
             this.save_logs_button = new System.Windows.Forms.Button();
-            this.encryption_password_textbox = new System.Windows.Forms.TextBox();
+            this.encryption_password_textbox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.setting_group_box = new System.Windows.Forms.GroupBox();
             this.delete_orginal_files_checkbox = new System.Windows.Forms.CheckBox();
             this.follow_sub_folders_checkbox = new System.Windows.Forms.CheckBox();
             this.save_password_checkbox = new System.Windows.Forms.CheckBox();
+            this.btnRc4Şifrele = new System.Windows.Forms.Button();
+            this.btnRc4Deşifrele = new System.Windows.Forms.Button();
+            this.encryption_password_textbox = new System.Windows.Forms.TextBox();
+            this.treeViewDosyalar = new System.Windows.Forms.TreeView();
             this.file_path_group_box.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.setting_group_box.SuspendLayout();
@@ -154,14 +151,15 @@
             this.OlusturButton.Text = "buton oluştur";
             this.OlusturButton.UseVisualStyleBackColor = true;
             // 
-            // MesajGönderButton
+            // btnŞifresizDosyalar
             // 
-            this.MesajGönderButton.Location = new System.Drawing.Point(10, 200);
-            this.MesajGönderButton.Name = "MesajGönderButton";
-            this.MesajGönderButton.Size = new System.Drawing.Size(81, 36);
-            this.MesajGönderButton.TabIndex = 37;
-            this.MesajGönderButton.Text = "Mesaj Gönder";
-            this.MesajGönderButton.UseVisualStyleBackColor = true;
+            this.btnŞifresizDosyalar.Location = new System.Drawing.Point(10, 200);
+            this.btnŞifresizDosyalar.Name = "btnŞifresizDosyalar";
+            this.btnŞifresizDosyalar.Size = new System.Drawing.Size(81, 36);
+            this.btnŞifresizDosyalar.TabIndex = 37;
+            this.btnŞifresizDosyalar.Text = "şifresiz dosyalar";
+            this.btnŞifresizDosyalar.UseVisualStyleBackColor = true;
+            this.btnŞifresizDosyalar.Click += new System.EventHandler(this.btnŞifresizDosyalar_Click);
             // 
             // SilButton
             // 
@@ -171,6 +169,7 @@
             this.SilButton.TabIndex = 36;
             this.SilButton.Text = "Sil";
             this.SilButton.UseVisualStyleBackColor = true;
+            this.SilButton.Click += new System.EventHandler(this.SilButton_Click);
             // 
             // DosyaEkleButton
             // 
@@ -181,21 +180,6 @@
             this.DosyaEkleButton.Text = "Dosya Ekle";
             this.DosyaEkleButton.UseVisualStyleBackColor = true;
             this.DosyaEkleButton.Click += new System.EventHandler(this.DosyaEkleButton_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 141);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(300, 24);
-            this.comboBox1.TabIndex = 34;
-            // 
-            // txtKey
-            // 
-            this.txtKey.Location = new System.Drawing.Point(5, 113);
-            this.txtKey.Name = "txtKey";
-            this.txtKey.Size = new System.Drawing.Size(300, 22);
-            this.txtKey.TabIndex = 41;
             // 
             // LogLabel
             // 
@@ -213,44 +197,6 @@
             this.LogTextBox.Name = "LogTextBox";
             this.LogTextBox.Size = new System.Drawing.Size(353, 146);
             this.LogTextBox.TabIndex = 42;
-            // 
-            // listViewReceiver
-            // 
-            this.listViewReceiver.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader8});
-            this.listViewReceiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listViewReceiver.GridLines = true;
-            this.listViewReceiver.HideSelection = false;
-            this.listViewReceiver.Location = new System.Drawing.Point(10, 255);
-            this.listViewReceiver.Margin = new System.Windows.Forms.Padding(4);
-            this.listViewReceiver.Name = "listViewReceiver";
-            this.listViewReceiver.Size = new System.Drawing.Size(566, 182);
-            this.listViewReceiver.TabIndex = 44;
-            this.listViewReceiver.UseCompatibleStateImageBehavior = false;
-            this.listViewReceiver.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "File Name";
-            this.columnHeader1.Width = 200;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "File Size";
-            this.columnHeader2.Width = 120;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Status";
-            this.columnHeader3.Width = 130;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Total Time";
-            this.columnHeader8.Width = 115;
             // 
             // file_path_group_box
             // 
@@ -423,20 +369,20 @@
             this.save_logs_button.UseVisualStyleBackColor = true;
             this.save_logs_button.Click += new System.EventHandler(this.save_logs_button_Click);
             // 
-            // encryption_password_textbox
+            // encryption_password_textbox2
             // 
-            this.encryption_password_textbox.Location = new System.Drawing.Point(1066, 409);
-            this.encryption_password_textbox.Margin = new System.Windows.Forms.Padding(4);
-            this.encryption_password_textbox.Name = "encryption_password_textbox";
-            this.encryption_password_textbox.Size = new System.Drawing.Size(161, 22);
-            this.encryption_password_textbox.TabIndex = 50;
-            this.encryption_password_textbox.UseSystemPasswordChar = true;
+            this.encryption_password_textbox2.Location = new System.Drawing.Point(587, 406);
+            this.encryption_password_textbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.encryption_password_textbox2.Name = "encryption_password_textbox2";
+            this.encryption_password_textbox2.Size = new System.Drawing.Size(161, 22);
+            this.encryption_password_textbox2.TabIndex = 50;
+            this.encryption_password_textbox2.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(951, 412);
+            this.label1.Location = new System.Drawing.Point(723, 409);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 16);
@@ -490,30 +436,65 @@
             this.save_password_checkbox.Text = "Save Encryption Password";
             this.save_password_checkbox.UseVisualStyleBackColor = true;
             // 
+            // btnRc4Şifrele
+            // 
+            this.btnRc4Şifrele.Location = new System.Drawing.Point(1003, 405);
+            this.btnRc4Şifrele.Name = "btnRc4Şifrele";
+            this.btnRc4Şifrele.Size = new System.Drawing.Size(137, 32);
+            this.btnRc4Şifrele.TabIndex = 53;
+            this.btnRc4Şifrele.Text = "Anahtarı kaydet";
+            this.btnRc4Şifrele.UseVisualStyleBackColor = true;
+            this.btnRc4Şifrele.Click += new System.EventHandler(this.btnRc4Şifrele_Click);
+            // 
+            // btnRc4Deşifrele
+            // 
+            this.btnRc4Deşifrele.Location = new System.Drawing.Point(1146, 405);
+            this.btnRc4Deşifrele.Name = "btnRc4Deşifrele";
+            this.btnRc4Deşifrele.Size = new System.Drawing.Size(132, 33);
+            this.btnRc4Deşifrele.TabIndex = 54;
+            this.btnRc4Deşifrele.Text = "Anahtar değeri seç";
+            this.btnRc4Deşifrele.UseVisualStyleBackColor = true;
+            this.btnRc4Deşifrele.Click += new System.EventHandler(this.btnRc4Deşifrele_Click);
+            // 
+            // encryption_password_textbox
+            // 
+            this.encryption_password_textbox.Location = new System.Drawing.Point(820, 410);
+            this.encryption_password_textbox.Name = "encryption_password_textbox";
+            this.encryption_password_textbox.Size = new System.Drawing.Size(100, 22);
+            this.encryption_password_textbox.TabIndex = 55;
+            // 
+            // treeViewDosyalar
+            // 
+            this.treeViewDosyalar.Location = new System.Drawing.Point(10, 243);
+            this.treeViewDosyalar.Name = "treeViewDosyalar";
+            this.treeViewDosyalar.Size = new System.Drawing.Size(295, 195);
+            this.treeViewDosyalar.TabIndex = 56;
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1290, 450);
+            this.Controls.Add(this.treeViewDosyalar);
+            this.Controls.Add(this.encryption_password_textbox);
+            this.Controls.Add(this.btnRc4Deşifrele);
+            this.Controls.Add(this.btnRc4Şifrele);
             this.Controls.Add(this.setting_group_box);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.encryption_password_textbox);
+            this.Controls.Add(this.encryption_password_textbox2);
             this.Controls.Add(this.save_logs_button);
             this.Controls.Add(this.encrypt_button);
             this.Controls.Add(this.decrypt_button);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.file_path_group_box);
-            this.Controls.Add(this.listViewReceiver);
             this.Controls.Add(this.LogLabel);
             this.Controls.Add(this.LogTextBox);
-            this.Controls.Add(this.txtKey);
             this.Controls.Add(this.İsimDüzenleButton);
             this.Controls.Add(this.ListeyiGüncelleButton);
             this.Controls.Add(this.OlusturButton);
-            this.Controls.Add(this.MesajGönderButton);
+            this.Controls.Add(this.btnŞifresizDosyalar);
             this.Controls.Add(this.SilButton);
             this.Controls.Add(this.DosyaEkleButton);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.BaglantıKopar);
             this.Controls.Add(this.Portlabel);
             this.Controls.Add(this.PortTextBox);
@@ -543,18 +524,11 @@
         private System.Windows.Forms.Button İsimDüzenleButton;
         private System.Windows.Forms.Button ListeyiGüncelleButton;
         private System.Windows.Forms.Button OlusturButton;
-        private System.Windows.Forms.Button MesajGönderButton;
+        private System.Windows.Forms.Button btnŞifresizDosyalar;
         private System.Windows.Forms.Button SilButton;
         private System.Windows.Forms.Button DosyaEkleButton;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox txtKey;
         private System.Windows.Forms.Label LogLabel;
         private System.Windows.Forms.TextBox LogTextBox;
-        private System.Windows.Forms.ListView listViewReceiver;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.GroupBox file_path_group_box;
         private System.Windows.Forms.Button remove_item_button;
         private System.Windows.Forms.Button add_files_button;
@@ -569,11 +543,15 @@
         private System.Windows.Forms.Button decrypt_button;
         private System.Windows.Forms.Button encrypt_button;
         private System.Windows.Forms.Button save_logs_button;
-        private System.Windows.Forms.TextBox encryption_password_textbox;
+        private System.Windows.Forms.TextBox encryption_password_textbox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox setting_group_box;
         private System.Windows.Forms.CheckBox delete_orginal_files_checkbox;
         private System.Windows.Forms.CheckBox follow_sub_folders_checkbox;
         private System.Windows.Forms.CheckBox save_password_checkbox;
+        private System.Windows.Forms.Button btnRc4Şifrele;
+        private System.Windows.Forms.Button btnRc4Deşifrele;
+        private System.Windows.Forms.TextBox encryption_password_textbox;
+        private System.Windows.Forms.TreeView treeViewDosyalar;
     }
 }

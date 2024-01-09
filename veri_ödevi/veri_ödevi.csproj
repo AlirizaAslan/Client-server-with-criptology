@@ -55,6 +55,7 @@
     <Compile Include="Encryption\3DES.cs" />
     <Compile Include="Encryption\AES.cs" />
     <Compile Include="Encryption\DES.cs" />
+    <Compile Include="Encryption\RC4.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

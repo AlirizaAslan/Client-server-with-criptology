@@ -16,7 +16,7 @@ namespace veri_ödevi
 {
     public partial class Form1 : Form
     {
-
+        private bool isListenerStarted = false;
         private TcpListener tcpListener;
         private Thread listenerThread;
 
@@ -178,12 +178,37 @@ namespace veri_ödevi
 
         private void server_button_Click(object sender, EventArgs e)
         {
-            int port = int.Parse(PortTextBox.Text);
-            tcpListener = new TcpListener(IPAddress.Any, port);
-            listenerThread = new Thread(new ThreadStart(ListenForClients));
-            listenerThread.Start();
 
-            LogTextBox.Text += "Server Başlatıldı.\r\n";
+            if (!isListenerStarted)
+            {
+                int port;
+                if (int.TryParse(PortTextBox.Text, out port))
+                {
+                    tcpListener = new TcpListener(IPAddress.Any, port);
+                    listenerThread = new Thread(new ThreadStart(ListenForClients));
+                    listenerThread.Start();
+                    LogTextBox.Text += "Server Başlatıldı.\r\n";
+
+                    // Listener'ı başlatıldı olarak işaretle
+                    isListenerStarted = true;
+
+                    MessageBox.Show("Listener başlatıldı.");
+                }
+                else
+                {
+                    MessageBox.Show("Geçerli bir port numarası girin.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Listener zaten başlatıldı.");
+            }
+            //int port = int.Parse(PortTextBox.Text);
+            //tcpListener = new TcpListener(IPAddress.Any, port);
+            //listenerThread = new Thread(new ThreadStart(ListenForClients));
+            //listenerThread.Start();
+
+            
         }
     }
 }
